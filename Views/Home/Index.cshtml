@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title>Employee Validation Exercise</title>
+    <style>
+        .ng-invalid.ng-touched {
+            background-color: #FA787E;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body ng-controller="EmployeeController as employee">
+        <form name="employeeForm" novalidate ng-submit="employee.add()">
+            <div>
+                <label>
+                    First Name:
+                    <input name="firstName" ng-model="employee.firstName" type="text" ng-required="true" />
+                    <span ng-show="employeeForm.firstName.$touched && employeeForm.firstName.$error.required" class="error">
+                        Employee First Name is required.
+                    </span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Last Name:
+                    <input name="lastName" ng-model="employee.lastName" type="text" ng-required="true" />
+                    <span ng-show="employeeForm.lastName.$touched && employeeForm.lastName.$error.required" class="error">
+                        Employee Last Name is required.
+                    </span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Age:
+                    <input name="age" ng-model="employee.age" type="number" ng-required="true" />
+                    <span ng-show="employeeForm.age.$touched && employeeForm.age.$error.required" class="error">
+                        Employee Age is required.
+                    </span>
+                    <span ng-show="employeeForm.age.$touched && employeeForm.age.$error.number" class="error">
+                        Employee Age must be a number.
+                    </span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Employee Type:
+                    <select name="employeeType" ng-model="employee.employeeType" ng-required="true">
+                        <option value="FullTime">Full Time</option>
+                        <option value="PartTime">Part Time</option>
+                    </select>
+                    <span ng-show="employeeForm.age.$touched && employeeForm.age.$error.required" class="error">
+                        Employee Type is Required!
+                    </span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Yearly Salary:
+                    <input name="yearlySalary" ng-model="employee.yearlySalary" type="number" ng-required="true" />
+                    <span ng-show="employeeForm.yearlySalary.$touched && employeeForm.yearlySalary.$error.required" class="error">
+                        Employee Yearly Salary is required.
+                    </span>
+                    <span ng-show="employeeForm.yearlySalary.$touched && employeeForm.yearlySalary.$error.number" class="error">
+                        Employee Yearly Salary must be a number.
+                    </span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Hourly Salary:
+                    <input name="hourlySalary" ng-model="employee.hourlySalary" type="number" ng-required="true" />
+                    <span ng-show="employeeForm.hourlySalary.$touched && employeeForm.hourlySalary.$error.required" class="error">
+                        Employee Hourly Salary is required.
+                    </span>
+                    <span ng-show="employeeForm.hourlySalary.$touched && employeeForm.hourlySalary.$error.number" class="error">
+                        Employee Hourly Salary must be a number.
+                    </span>
+                </label>
+            </div>
+            <div>
+                <input type="submit" value="Add" ng-disabled="employeeForm.$invalid" />
+            </div>
+        </form>
+    <!-- Library Files -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-touch/angular-touch.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- App Files-->
+    <script src="~/ngApp/AngularJsDesignAPP.js"></script>
+    <script src="~/ngApp/controllers/AngularJsFormValidation.js"></script>
+
+
+
+</body>
+</html>

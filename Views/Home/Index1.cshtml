@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title>Movies</title>
+    <style>
+        .ng-invalid.ng-touched {
+            background-color: #FA787E;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body ng-controller="CarController as car">
+    <form name="carForm" novalidate ng-submit="car.add()">
+        <div>
+            <label>
+                Model:
+                <input name="model" ng-model="car.model" type="text" ng-required="true" />
+                <span ng-show="carForm.model.$touched && carForm.model.$error.required" class="error">
+                    Car model is required.
+                </span>
+            </label>
+        </div>
+        <div>
+            <label>
+                Price:
+                <input name="price" ng-model="car.price" type="number" ng-required="true" />
+                <span ng-show="carForm.price.$touched && carForm.price.$error.required" class="error">
+                    Car price is required.
+                </span>
+                <span ng-show="carForm.price.$touched && carForm.price.$error.number" class="error">
+                    Car price must be a number.
+                </span>
+            </label>
+        </div>
+        <div>
+            <input type="submit" value="Add" ng-disabled="carForm.$invalid" />
+        </div>
+    </form>
+
+
+    <!-- Library Files -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-touch/angular-touch.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- App Files-->
+    <script src="~/ngApp/AngularJsDesignAPP.js"></script>
+    <script src="~/ngApp/controllers/AngularJsFormValidation.js"></script>
+
+
+
+</body>
+</html>
