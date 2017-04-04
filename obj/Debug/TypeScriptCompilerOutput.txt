@@ -1,0 +1,8 @@
+C:\Users\Rainie\Documents\Visual Studio 2015\Projects\AngularJsDesign\src\AngularJsDesign\wwwroot\ngApp\app.js
+C:\Users\Rainie\Documents\Visual Studio 2015\Projects\AngularJsDesign\src\AngularJsDesign\wwwroot\ngApp\app.js.map
+C:\Users\Rainie\Documents\Visual Studio 2015\Projects\AngularJsDesign\src\AngularJsDesign\wwwroot\ngApp\services\services.js
+C:\Users\Rainie\Documents\Visual Studio 2015\Projects\AngularJsDesign\src\AngularJsDesign\wwwroot\ngApp\services\services.js.map
+C:\Users\Rainie\Documents\Visual Studio 2015\Projects\AngularJsDesign\src\AngularJsDesign\wwwroot\ngApp\controllers\AngularJsFormValidation.js
+C:\Users\Rainie\Documents\Visual Studio 2015\Projects\AngularJsDesign\src\AngularJsDesign\wwwroot\ngApp\controllers\AngularJsFormValidation.js.map
+C:\Users\Rainie\Documents\Visual Studio 2015\Projects\AngularJsDesign\src\AngularJsDesign\wwwroot\ngApp\controllers\controllers.js
+C:\Users\Rainie\Documents\Visual Studio 2015\Projects\AngularJsDesign\src\AngularJsDesign\wwwroot\ngApp\controllers\controllers.js.map
